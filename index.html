@@ -5,19 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Peter Kipruto | Software Engineer</title>
 <style>
-body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#0f172a;color:white}
+body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#0f172a;color:white;transition:background 0.3s, color 0.3s}
 header{padding:40px;text-align:center;background:#1e293b}
 nav{display:flex;justify-content:center;gap:20px;background:#020617;padding:10px}
 nav a{color:white;text-decoration:none;font-weight:bold}
 section{padding:50px;max-width:900px;margin:auto}
 .card{background:#1e293b;padding:20px;border-radius:10px;margin-top:20px}
 footer{text-align:center;padding:20px;background:#020617;margin-top:40px}
-button{padding:10px 20px;border:none;border-radius:6px;background:#3b82f6;color:white;font-weight:bold}
+button{padding:10px 20px;border:none;border-radius:6px;background:#3b82f6;color:white;font-weight:bold;cursor:pointer}
+#profile-pic{border-radius:50%;width:150px;height:150px;margin-top:20px}
+.toggle-mode{position:fixed;top:10px;right:10px;padding:10px;background:#3b82f6;color:white;border:none;border-radius:6px;cursor:pointer}
 </style>
 </head>
 <body>
 
+<button class="toggle-mode" onclick="toggleMode()">Toggle Dark/Light Mode</button>
+
 <header>
+<img src="profile.jpg" alt="Peter Kipruto" id="profile-pic">
 <h1>Peter Kipruto</h1>
 <p>Software Engineer | Cybersecurity Enthusiast | AI Systems</p>
 </header>
@@ -26,6 +31,7 @@ button{padding:10px 20px;border:none;border-radius:6px;background:#3b82f6;color:
 <a href="#about">About</a>
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
+<a href="#cv">CV</a>
 </nav>
 
 <section id="about">
@@ -35,17 +41,23 @@ button{padding:10px 20px;border:none;border-radius:6px;background:#3b82f6;color:
 
 <section id="projects">
 <h2>Projects</h2>
-
 <div class="card">
-<h3>AI‑Driven Role Based Access Control System</h3>
+<h3>AI-Driven Role Based Access Control System</h3>
 <p>A security system that integrates AI anomaly detection with RBAC to improve access control security in cloud environments.</p>
 </div>
-
 <div class="card">
 <h3>Web Development Projects</h3>
 <p>Various PHP, MySQL and frontend projects demonstrating authentication systems, dashboards and secure applications.</p>
 </div>
+<div class="card">
+<h3>GitHub Projects</h3>
+<p>Check out more of my coding projects on my GitHub profile: <a href="https://github.com/Peter2320" target="_blank" style="color:#3b82f6">https://github.com/Peter2320</a></p>
+</div>
+</section>
 
+<section id="cv">
+<h2>Download My CV</h2>
+<button onclick="window.location='Peter_Kipruto_CV.pdf'">Download CV</button>
 </section>
 
 <section id="contact">
@@ -60,5 +72,18 @@ button{padding:10px 20px;border:none;border-radius:6px;background:#3b82f6;color:
 <p>© 2026 Peter Kipruto</p>
 </footer>
 
+<script>
+function toggleMode(){
+    if(document.body.style.background=="#f4f4f4"){
+        document.body.style.background="#0f172a";
+        document.body.style.color="white";
+    } else {
+        document.body.style.background="#f4f4f4";
+        document.body.style.color="#0f172a";
+    }
+}
+</script>
+
 </body>
 </html>
+
